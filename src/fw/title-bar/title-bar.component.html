@@ -1,7 +1,15 @@
 
-<div class="title-bar">
+<div *screenBelowLarge class="title-bar-small">
+  <span class="glyphicon glyphicon-menu-hamburger"></span>
+  <div class="small-image-holder">
+      <img src="assets/logo_128.png" class="small-image" />
+  </div>  
+  <span class="glyphicon glyphicon-option-vertical"></span>
+</div>
+
+<div *screenLarge class="title-bar user-title-bar">
   <img src="assets/logo_128.png" alt="Green Nations Logo" />
   <div class="menu-area">
-
+    <fw-top-bar></fw-top-bar>
   </div>
 </div>
