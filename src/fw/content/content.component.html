@@ -1,4 +1,5 @@
-<fw-menu *ngIf="menuService.isVertical" class="vertical-menu">
+<fw-menu *ngIf="(menuService.showingLeftSideMenu && !screenService.isLarge()) || (menuService.isVertical && screenService.isLarge())" 
+        class="vertical-menu">
 </fw-menu>
 
 <div class="body-style">
