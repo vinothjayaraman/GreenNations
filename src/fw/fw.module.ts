@@ -1,3 +1,4 @@
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FrameworkBodyComponent} from './framework-body/framework-body.component';
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
 import {PopupMenuComponent} from './menus/popup-menu/popup-menu.component';
 @NgModule({
   imports: [
+    BrowserAnimationsModule,
     CommonModule,
     RouterModule
   ],
