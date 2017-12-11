@@ -1,5 +1,6 @@
-import { Component,Input, OnInit, HostBinding, HostListener } from '@angular/core';
+import { Component,Input, OnInit, HostBinding, HostListener,ElementRef,Renderer} from '@angular/core';
 import { MenuItem, MenuService } from '../../services/menu.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'fw-menu-item',
@@ -18,7 +19,28 @@ export class MenuItemComponent implements OnInit {
   popupLeft: number = 0;
   popupTop: number = 34;
 
-  constructor(private menuService: MenuService) { }
+  constructor(private router: Router, 
+              private menuService: MenuService,
+              private el: ElementRef,
+              private renderer: Renderer) { }
+
+  @HostListener('click',['$event'])
+  onclick(event): void{
+    event.stopPropagation();
+    
+    if (this.item.submenu) {
+      if(this.menuService.isVertical){
+        this.mouseInPopup = !this.mouseInPopup;
+      }
+    } else if(this.item.route) {
+      let newEvent = new MouseEvent('mouseleave',{bubbles: true})  ;
+      this.renderer.invokeElementMethod(
+        this.el.nativeElement,'dispatchEvent',[newEvent]
+      );
+
+      this.router.navigate(['/'+this.item.route]);
+    }
+  }
 
   onPopupMouseLeave(event): void{
     if (!this.menuService.isVertical) {
