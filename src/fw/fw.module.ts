@@ -15,11 +15,14 @@ import { MenuComponent } from './menus/menu/menu.component';
 import {MenuItemComponent} from './menus/menu-item/menu-item.component';
 import { RouterModule } from '@angular/router';
 import {PopupMenuComponent} from './menus/popup-menu/popup-menu.component';
+import {SignInComponent} from './users/sign-in/sign-in.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     BrowserAnimationsModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   declarations: [
     FrameworkBodyComponent,
@@ -31,7 +34,8 @@ import {PopupMenuComponent} from './menus/popup-menu/popup-menu.component';
     ScreenBelowLarge,
     MenuComponent,
     MenuItemComponent,
-    PopupMenuComponent
+    PopupMenuComponent,
+    SignInComponent
   ],
   providers: [
     FrameworkConfigService,
@@ -39,7 +43,8 @@ import {PopupMenuComponent} from './menus/popup-menu/popup-menu.component';
     MenuService
   ],
   exports: [
-    FrameworkBodyComponent    
+    FrameworkBodyComponent,
+    SignInComponent    
   ]
 })
 export class FwModule { }
