@@ -6,7 +6,7 @@
     width: 100vw;
     background-position: center center;
     background-size: cover;
-    background-image: url('./assets/mountains.jpg');
+    background-image: url('/assets/mountains.jpg');
 }
 
 .sign-in-form{

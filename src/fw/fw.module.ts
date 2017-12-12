@@ -43,8 +43,7 @@ import { FormsModule } from '@angular/forms';
     MenuService
   ],
   exports: [
-    FrameworkBodyComponent,
-    SignInComponent    
+    FrameworkBodyComponent
   ]
 })
 export class FwModule { }
