@@ -9,7 +9,7 @@ export class CountryListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {    
   }
 
 }

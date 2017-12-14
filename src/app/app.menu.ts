@@ -4,7 +4,7 @@ export let initialMenuItems : Array<MenuItem> = [
     {
         text: 'Dashboard',
         icon: 'glyphicon-dashboard',
-        route: '/authenticated/dashboard',
+        route: 'authenticated/dashboard',
         submenu: null
     },
     {
@@ -20,19 +20,19 @@ export let initialMenuItems : Array<MenuItem> = [
                     {
                         text: 'USA',
                         icon: 'glyphicon-flag',
-                        route: '/authenticated/country-detail/USA',
+                        route: 'authenticated/country-detail/USA',
                         submenu: null
                     },
                     {
                         text: 'India',
                         icon: 'glyphicon-flag',
-                        route: '/authenticated/country-detail/India',
+                        route: 'authenticated/country-detail/India',
                         submenu: null
                     },
                     {
                         text: 'Switcherland',
                         icon: 'glyphicon-flag',
-                        route: '/authenticated/country-detail/Switcherland',
+                        route: 'authenticated/country-detail/Switcherland',
                         submenu: null
                     }
                 ]
@@ -40,19 +40,19 @@ export let initialMenuItems : Array<MenuItem> = [
             {
                 text: 'Top-3',
                 icon: 'glyphicon-flag',
-                route: '/authenticated/country-list/3',
+                route: 'authenticated/country-list/3',
                 submenu: null
             },
             {
                 text: 'Top-10',
                 icon: 'glyphicon-flag',
-                route: '/authenticated/country-list/10',
+                route: 'authenticated/country-list/10',
                 submenu: null
             },
             {
                 text: 'All',
                 icon: 'glyphicon-flag',
-                route: '/authenticated/country-list/0',
+                route: 'authenticated/country-list/0',
                 submenu: null
             }
         ]
@@ -65,13 +65,13 @@ export let initialMenuItems : Array<MenuItem> = [
             {
                 text: 'Country List',
                 icon: 'glyphicon-wrench',
-                route: '/authenticated/country-maint',
+                route: 'authenticated/country-maint',
                 submenu: null
             },
             {
                 text: 'Settings',
                 icon: 'glyphicon-wrench',
-                route: '/authenticated/settings',
+                route: 'authenticated/settings',
                 submenu: null
             }
         ]
