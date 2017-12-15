@@ -74,4 +74,12 @@ export class DynamicFormComponent implements OnInit, OnChanges {
     }
   }
 
+  onCreate(){
+    this.submitted = true;
+    if (this.form.valid) {
+      this.status = "waiting";
+      this.create.emit(this.form.value);
+    }
+  }
+
 }
